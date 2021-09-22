@@ -1,0 +1,23 @@
+<div id="app"></div>
+
+<form>
+  <label for="my_field">Input</label>
+  <input id="my_field" type="text" name="my_field" />
+</form>
+
+<script>
+  $('#my_field').on({
+    keypress: function () {
+      typed_into = true;
+    },
+    change: function () {
+      if (typed_into) {
+        alert('type');
+        typed_into = false; //reset type
+        listener;
+      } else {
+        alert('not type');
+      }
+    },
+  });
+</script>
